@@ -10,8 +10,9 @@ import ContactUs from './Pages/ContactUs/ContactUs';
 // comp definition
 function App() {
   return (
+        // {/* must return jsx */}
     <BrowserRouter>
-    {/* must return jsx */}
+
     <div>
       <Header/>
 
