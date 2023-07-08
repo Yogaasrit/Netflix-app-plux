@@ -7,7 +7,7 @@ function Header() {
         <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
           <div className="container-fluid">
             <a className="navbar-brand" href="/">
-              <h2>Netflex</h2>
+              <h2>Netflex-App-Plus</h2>
             </a>
             <button
               className="navbar-toggler"
@@ -23,7 +23,7 @@ function Header() {
             <MenuList/>
             <div className="collapse navbar-collapse" id="navbarCollapse">
               
-              <form className="d-flex" role="search">
+              {/* <form className="d-flex" role="search">
                 <input
                   className="form-control me-2"
                   type="search"
@@ -33,7 +33,7 @@ function Header() {
                 <button className="btn btn-outline-success" type="submit">
                   Search
                 </button>
-              </form>
+              </form> */}
             </div>
           </div>
         </nav>
