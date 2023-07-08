@@ -66,7 +66,7 @@ const HomePage = () => {
         <MyProfile/>
         </div>
         <div className = "md-3">
-            <h2>Life Cycle Hooks| Demo</h2>
+            <h2>Hooks | Life Cycle Hooks in React | Demo</h2>
         <LifeCycleDemo/>
         </div>
         
