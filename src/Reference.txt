@@ -1,0 +1,210 @@
+<header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            Fixed navbar
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                  Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Link
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+-----------------------------------------------------------------------------
+
+Learn about intergrating bootstrap(npm) 3 ways to integerate bootstrap
+1. Orginal bootstrap - raw bootstrap --> prefered to use. 
+   https://create-react-app.dev/docs/adding-bootstrap/
+2. react-bootstrap
+   npm i react-bootstrap
+3. reactstrap
+   npm i reactstrap
+-------------------------------------------------------------------------------
+cross component communication
+
+1. Parent to child   (Footer to MenuList)
+
+  Using props
+
+
+2. Child to Parent  (Footer to App)
+
+   Using props and callback function and event listner 
+
+
+3. Any to Any component (siblings to siblings, child to grandparent)
+
+   Using context API
+   Using Redux js/Flux/Mobx
+
+--------------------------------------------------------------------------------
+1.Functional Component - Must be in component folder
+    // 1. Named Function
+    // 2. UnNamed Function
+    // 3. Arror Function 
+
+    import - optional
+    component
+        must return jsx
+    export
+
+
+2.Class Component  - in be container folder
+
+      import Component class react= Must 
+      // import {Component} from "react';
+            component must inherit(class **name extends React.Component)
+          must have render method
+          must return jsx
+      export
+
+----------------------------------------------------------------------------------
+Concepts:
+1. Data binding
+2. Props 
+3. states
+4. EVents
+5. List and Keys
+6. Conditionals
+
+
+-----------------------------------------------------------------------------------
+Data Binding:
+//Data binding - Keep the data inside the comp and use it
+    //2 types of databinding- one way, two way
+    // 1 way - Jsx displays the data
+    // 2 way - Keep the ata in variable and display it in jsx 
+    // then update the data and see the changes in jsx.
+------------------------------------------------------------------------------------
+props:
+  // attributes
+  // Used for Parent to child communication
+-----------------------------------------------------------------------------------
+Events:
+State is a place to hold component wide data
+state is a keyword in react
+state is a object
+state = {
+  x = 10;
+}
+
+
+--------------------------------------------------------------------------------------
+RAFCE = React Arrow Functional Component export
+______________________________________________________________________________________
+
+Naming Conventions & Casing 
+----
+  Casing Types 
+  --------
+    1. PascalCase 
+        * Recommended for Object Oriented Program's classes 
+        * also Recommended for Interface in Java & TypeScript 
+        * all react components should be named in PascalCase
+        * all components folder should be of this type 
+
+        examples 
+        ---
+          class CarDetails {
+
+          }
+
+          interface Employee {
+
+          }
+
+    2. camelCase 
+        * Recommended for variables, const, functions, methods in JS & TS 
+        * Recommended for id's of html or JSX elements 
+
+        examples 
+        -----
+          var myCar = 'BMW';
+
+          function getCarInfo() {
+            //....
+          }
+    
+    3. kebab-case
+        * Recommended for URLs 
+        * Recommended for file names, folder names (if not react), assets in front end projects 
+        * Recommended for css classes 
+        * okay for id's of html elements if your architect says okay
+
+        examples 
+        -----
+          btn-primary
+          slideshow-container 
+          youtube-logo.png 
+
+    4. snake_case
+        * never ever use this. 
+        * okay for const in JS & TS if architect accepts
+
+        examples
+        ---
+          const MAX_STUDENTS_PER_CLASS = 30;
+
+------------------------------------------------------------------------------------------------------------
+Styling in React
+1. External Styling
+    From third party - ex bootstrap
+    Our own third 
+    ex : index.js --> Global Any one can access
+
+    Even if we write the css inside the component it is Global....
+    
+2. Internal styling
+3. Inline styling
+-----------------------------------------------------------------------------------------------------------
+One-Way binding
+* JS -> JSX
+keeping the data in js and displaying it in jsx.
+Two-Way Binding
+* JS <-> JSX
+Changing The value in JSX will reflect in JS also.
+
+
+---------------------------------------------------------------------------------------------------------
+Life Cycle of Hooks
+
+Class Component only will have Hooks.
+Hooks are methods.(MEthod is a function coded inside a class).
