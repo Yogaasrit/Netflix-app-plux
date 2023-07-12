@@ -16,7 +16,7 @@ const HomePage = () => {
 
         <div className = "row">
             <div>
-                <h3>Latest Video | props </h3>
+                <h3>Latest Video | props | Demo</h3>
             </div>
             <div className="col-md-3">
                 <LatestVideo 

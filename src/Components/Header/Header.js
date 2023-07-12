@@ -4,10 +4,10 @@ function Header() {
   return (
     <div>
       <header>
-        <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <nav className="navbar navbar-expand-md fixed-top" style={{backgroundColor: "#F07A91"}}>
           <div className="container-fluid">
             <a className="navbar-brand" href="/">
-              <h2>Netflex-App-Plus</h2>
+              <h2>NetflexPlus App</h2>
             </a>
             <button
               className="navbar-toggler"

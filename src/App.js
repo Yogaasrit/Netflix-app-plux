@@ -7,7 +7,8 @@ import HomePage from './Pages/HomePage/HomePage';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import AboutUs from './Pages/AboutUs/AboutUs';
 import ContactUs from './Pages/ContactUs/ContactUs';
-// comp definition
+import 'bootstrap/dist/css/bootstrap.css';
+
 function App() {
   return (
         // {/* must return jsx */}
@@ -15,7 +16,6 @@ function App() {
 
     <div>
       <Header/>
-
       <main className = "container mt-5 pt-3"> 
       {/* margin top- mt-5 padding top -pt-5*/}
 
