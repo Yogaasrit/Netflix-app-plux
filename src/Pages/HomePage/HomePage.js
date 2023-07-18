@@ -1,16 +1,20 @@
 
 //rafce - react arrow function component export
 import React from 'react'
-import Subscription from '../../Components/Subscription/Subscription'
-import TrendingVideoList from '../../Components/TrendingVideoList/TrendingVideoList'
-import RecommendedVideoList from '../RecommendedVideoList/RecommendedVideoList'
+import TrendingVideoList from './TrendingVideoList/TrendingVideoList'
+import RecommendedVideoList from './RecommendedVideoList/RecommendedVideoList'
+import Subscription from './Subscription/Subscription'
 import LatestVideo from './LatestVideo/LatestVideo'
 import LifeCycleDemo from './LifeCycleDemo/LifeCycleDemo'
 import MyProfile from './MyProfile/MyProfile'
+import { Helmet } from 'react-helmet';
 
 const HomePage = () => {
   return (
     <div>
+        <Helmet>
+          <title>Home </title>
+        </Helmet>
         <h1>Welcome to HomePage !</h1>
         
 

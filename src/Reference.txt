@@ -194,6 +194,18 @@ Changing The value in JSX will reflect in JS also.
 
 
 ---------------------------------------------------------------------------------------------------------
+
+Single Page App (SPA) Characteristics (7)
+---------------
+  1. Pages should Not Refresh 
+  2. URL should be changed 
+  3. History should be maintained without Page Refresh 
+  4. Header and Footer should be intact. 
+  5. The section in between header and footer should be updated 
+  6. Active Menu should be set 
+  7. Page Title should also be changed 
+
+  --------------------------------------------------------------------------------------------------------
 Life Cycle of Hooks
 
 Class Component only will have Hooks.
@@ -257,3 +269,26 @@ Routing
     Let's replace <a href=''> with <Link to=''> in MenuList.js
 ----------------------------------------------------------------------------------------------------------
 Helmet package
+
+Advance Topics:
+1. Fragment
+Fragment  is used to wrap the more children tags instead of div
+<Fragment>
+  <h1></h1>
+  <b><b>
+</Fragment>->Import fragment.
+There is no trace in console.
+Will not appear anywhere in UI.
+Multiple fragments is not allowed.
+
+<></> -> This is also fragment.
+
+2. Strictmode
+It is programmed to print twice during development mode.
+Javascript engine will work in Two modes:
+  1. Non-strict mode-default
+  2. Strictmode - "use strict" in js
+  when we give "use strict" it works on strict mode.
+  It can also be in function.
+
+3. 

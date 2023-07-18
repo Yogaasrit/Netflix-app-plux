@@ -8,10 +8,12 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import AboutUs from './Pages/AboutUs/AboutUs';
 import ContactUs from './Pages/ContactUs/ContactUs';
 import 'bootstrap/dist/css/bootstrap.css';
+// import ErrorBoundary from './Containers/Shared/ErrorBoundary/ErrorBoundary';
 
 function App() {
   return (
         // {/* must return jsx */}
+    
     <BrowserRouter>
 
     <div>
@@ -19,13 +21,16 @@ function App() {
       <main className = "container mt-5 pt-3"> 
       {/* margin top- mt-5 padding top -pt-5*/}
 
-
+    
+    {/* import npm i react-router-dom package */}
       <Routes>
         <Route path = '/' element = {<HomePage/>}></Route>
+       
         <Route path = '/about-us' element = {<AboutUs/>}></Route>
+       
         <Route path = '/contact-us' element = {<ContactUs/>}></Route>
       </Routes>
-
+      
 
       </main>
 
