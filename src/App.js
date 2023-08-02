@@ -8,6 +8,7 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import AboutUs from './Pages/AboutUs/AboutUs';
 import ContactUs from './Pages/ContactUs/ContactUs';
 import 'bootstrap/dist/css/bootstrap.css';
+import HocDemoPage from './Pages/HocDemoPage/HocDemoPage';
 // import ErrorBoundary from './Containers/Shared/ErrorBoundary/ErrorBoundary';
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
     {/* import npm i react-router-dom package */}
       <Routes>
         <Route path = '/' element = {<HomePage/>}></Route>
+
+        <Route path = '/hoc-demo' element = {<HocDemoPage/>}></Route>
        
         <Route path = '/about-us' element = {<AboutUs/>}></Route>
        

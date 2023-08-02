@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import ErrorBoundary from '../../Containers/Shared/ErrorBoundary/ErrorBoundary';
 
 const AboutUs = () => {
-  const x = 10;
+  // const x = 10;
   return (
   
     <ErrorBoundary>
@@ -18,7 +18,7 @@ const AboutUs = () => {
       {/* inner component */}
     <p> Our own fragment of component is serving this UI.</p>
     <p> Refer MockFragment comp in code base.</p>
-    <p>{x()}</p>
+    {/* <p>{x()}</p> */}
     </MockFragment>
     </ErrorBoundary>
   )
