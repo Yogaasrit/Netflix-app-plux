@@ -271,6 +271,7 @@ Routing
 Helmet package
 
 Advance Topics:
+
 1. Fragment
 Fragment  is used to wrap the more children tags instead of div
 <Fragment>
@@ -291,4 +292,6 @@ Javascript engine will work in Two modes:
   when we give "use strict" it works on strict mode.
   It can also be in function.
 
-3. 
+3. Hoc - Higher Order Component
+// a higher-order component (HOC) is a function that
+// takes a component as input and return a new comp as output
