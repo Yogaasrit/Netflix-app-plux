@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export class MyProfile extends Component {
 
 state = {
-    profileName : 'Yogaasri BE'
+    profileName : ''
 }
 handleChangeProfileName = (event) =>{ //Onchange it will store in event
     // console.log(event);

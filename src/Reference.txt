@@ -295,3 +295,18 @@ Javascript engine will work in Two modes:
 3. Hoc - Higher Order Component
 // a higher-order component (HOC) is a function that
 // takes a component as input and return a new comp as output
+
+4. Types of Language based on Data typing
+  1. Strictly Typed / Strongly Typed
+      ex: Java,C#,TypeScript
+      String myStr = "Yoga";
+      myStr = false;// -> ERROR
+
+  2. Loosely typed / dynamically typed
+      ex: Js,python,php
+      myStr = "Yoga";
+      myStr = false;// -> NO ERROR
+
+5.Static TypeChecking
+    1. Intergrating TypeScript.
+    2. 
