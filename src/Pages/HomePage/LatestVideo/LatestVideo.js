@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 const LatestVideo = (props) => {
   return (
@@ -19,5 +20,11 @@ const LatestVideo = (props) => {
 
   )
 }
-
+LatestVideo.propTypes = {
+  image : PropTypes.string,
+  title : PropTypes.string,
+  description : PropTypes.string,
+  views : PropTypes.string,
+  publised : PropTypes.string
+};
 export default LatestVideo;
