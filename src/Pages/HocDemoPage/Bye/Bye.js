@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PropTypes from 'prop-types';
 const Bye = (props) => {
   return (
     <div>
@@ -7,5 +7,7 @@ const Bye = (props) => {
     </div>
   )
 }
-
+Bye.propTypes = {
+  name: PropTypes.string
+}
 export default Bye

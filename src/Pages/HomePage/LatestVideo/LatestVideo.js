@@ -21,10 +21,10 @@ const LatestVideo = (props) => {
   )
 }
 LatestVideo.propTypes = {
-  image : PropTypes.string,
-  title : PropTypes.string,
-  description : PropTypes.string,
-  views : PropTypes.string,
-  publised : PropTypes.string
+  image: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  views: PropTypes.string,
+  publised: PropTypes.string
 };
 export default LatestVideo;

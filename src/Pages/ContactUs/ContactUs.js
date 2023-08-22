@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet';
 const ContactUs = () => {
-  return ( 
+  return (
     <>
     <Helmet>
           <title>Contact Us</title>

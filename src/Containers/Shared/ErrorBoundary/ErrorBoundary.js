@@ -1,23 +1,25 @@
 // Error boundary should be the class comp.
 
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 
 export class ErrorBoundary extends Component {
-    state = {
-        hasError : false
-    }
-    // catching the error
-    // when there is runtime error -- serve the UI to display generic error msg
-    // it can receive the error that was thrown as param
-    // this method must return a value to update state
-    static getDerivedStateFromError(error){
-        console.log(error);
-        return{
-            hasError : true
-        }
-    }
+  state = {
+    hasError: false
+  }
 
-    // working lifecycle hook to log the errors in third party services
+  // catching the error
+  // when there is runtime error -- serve the UI to display generic error msg
+  // it can receive the error that was thrown as param
+  // this method must return a value to update state
+  static getDerivedStateFromError (error) {
+    console.log(error);
+    return {
+      hasError: true
+    }
+  }
+
+  // working lifecycle hook to log the errors in third party services
   componentDidCatch (error, errorInfo) {
     console.log('===== Inside componentDidCatch =======');
     console.log(error); // the error in original source code
@@ -27,18 +29,20 @@ export class ErrorBoundary extends Component {
     // So that many people's response and error will be displayed for develper.
   }
 
-  render() {
-    if(this.state.hasError)
-    {
-        return(
+  render () {
+    if (this.state.hasError) {
+      return (
             <div className='alert alert-danger'>
                 <p>Sorry! Some Error Occurred. Try again later</p>
           <p>If the error persists contact the Admin</p>
             </div>
-        )
+      )
     }
     return this.props.children
   }
 }
 
+ErrorBoundary.propTypes = {
+  children: PropTypes.element
+}
 export default ErrorBoundary

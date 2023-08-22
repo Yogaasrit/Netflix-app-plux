@@ -6,7 +6,7 @@ import ErrorBoundary from '../../Containers/Shared/ErrorBoundary/ErrorBoundary';
 const AboutUs = () => {
   // const x = 10;
   return (
-  
+
     <ErrorBoundary>
     <h1>AboutUs Page</h1>
     <h2> Demo of MockFragment page</h2>

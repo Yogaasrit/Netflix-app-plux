@@ -1,10 +1,10 @@
-import MenuList from "../MenuList/MenuList";
+import MenuList from '../MenuList/MenuList';
 
-function Header() {
+function Header () {
   return (
     <div>
       <header>
-        <nav className="navbar navbar-expand-md fixed-top" style={{backgroundColor: "#F07A91"}}>
+        <nav className="navbar navbar-expand-md fixed-top" style={{ backgroundColor: '#F07A91' }}>
           <div className="container-fluid">
             <a className="navbar-brand" href="/">
               <h2>NetflexPlus App</h2>
@@ -22,7 +22,7 @@ function Header() {
             </button>
             <MenuList/>
             <div className="collapse navbar-collapse" id="navbarCollapse">
-              
+
               {/* <form className="d-flex" role="search">
                 <input
                   className="form-control me-2"
