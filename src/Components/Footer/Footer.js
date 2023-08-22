@@ -12,15 +12,15 @@ const Footer = function () {
   // then update the data and see the changes in jsx.
 
   return (
-        <footer className = "text-center">
-        <hr/>
-        {/* horizontal line */}
+    <footer className = "text-center">
+      <hr/>
+      {/* horizontal line */}
 
-            <MenuList/>
-            <h4>CopyRights {year}|{developerName}</h4>
-            <p>{x}</p>
+      <MenuList/>
+      <h4>CopyRights {year}|{developerName}</h4>
+      <p>{x}</p>
 
-        </footer>
+    </footer>
   );
 }
 export default Footer;

@@ -32,10 +32,10 @@ export class ErrorBoundary extends Component {
   render () {
     if (this.state.hasError) {
       return (
-            <div className='alert alert-danger'>
-                <p>Sorry! Some Error Occurred. Try again later</p>
+        <div className='alert alert-danger'>
+          <p>Sorry! Some Error Occurred. Try again later</p>
           <p>If the error persists contact the Admin</p>
-            </div>
+        </div>
       )
     }
     return this.props.children

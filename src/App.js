@@ -17,26 +17,26 @@ function App () {
 
     <BrowserRouter>
 
-    <div>
-      <Header/>
-      <main className = "container mt-5 pt-3">
-      {/* margin top- mt-5 padding top -pt-5 */}
+      <div>
+        <Header/>
+        <main className = "container mt-5 pt-3">
+          {/* margin top- mt-5 padding top -pt-5 */}
 
-    {/* import npm i react-router-dom package */}
-      <Routes>
-        <Route path = '/' element = {<HomePage/>}></Route>
+          {/* import npm i react-router-dom package */}
+          <Routes>
+            <Route path = '/' element = {<HomePage/>}></Route>
 
-        <Route path = '/hoc-demo' element = {<HocDemoPage/>}></Route>
+            <Route path = '/hoc-demo' element = {<HocDemoPage/>}></Route>
 
-        <Route path = '/about-us' element = {<AboutUs/>}></Route>
+            <Route path = '/about-us' element = {<AboutUs/>}></Route>
 
-        <Route path = '/contact-us' element = {<ContactUs/>}></Route>
-      </Routes>
+            <Route path = '/contact-us' element = {<ContactUs/>}></Route>
+          </Routes>
 
-      </main>
+        </main>
 
-      <Footer/>
-    </div>
+        <Footer/>
+      </div>
     </BrowserRouter>
   );
 }

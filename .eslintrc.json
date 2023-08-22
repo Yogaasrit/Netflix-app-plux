@@ -1,7 +1,8 @@
 {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "jest": true
     },
     "extends": [
         "standard",
@@ -16,6 +17,12 @@
     ],
     "rules": {
         "semi" : "off",
-        "react/react-in-jsx-scope" : "off"
+        "react/react-in-jsx-scope" : "off",
+        "indent" : ["error", 2]
+    },
+    "settings" : {
+        "react" : {
+            "version" : "detect"
+        }
     }
 }

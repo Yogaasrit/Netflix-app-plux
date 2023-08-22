@@ -3,12 +3,12 @@ import { Helmet } from 'react-helmet';
 const ContactUs = () => {
   return (
     <>
-    <Helmet>
-          <title>Contact Us</title>
-        </Helmet>
-    <div>
+      <Helmet>
+        <title>Contact Us</title>
+      </Helmet>
+      <div>
       ContactUs
-    </div>
+      </div>
     </>
   )
 }

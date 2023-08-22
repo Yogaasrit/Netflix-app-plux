@@ -9,10 +9,10 @@ const applyStyles = (OriginalComponent) => {
 
   const NewComponent = (props) => {
     return (
-        <div className="red-box">
-          <OriginalComponent {...props}/>
-          {/* props is used to display the name. */}
-        </div>
+      <div className="red-box">
+        <OriginalComponent {...props}/>
+        {/* props is used to display the name. */}
+      </div>
     );
   }
 

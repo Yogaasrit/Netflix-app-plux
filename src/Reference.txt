@@ -317,34 +317,52 @@ Javascript engine will work in Two modes:
 
 6. Linting
     ESLINT
-    How to Setup ESLint and also prettier?
-=========
-  Step 1:   
-    npm i eslint --save-dev 
-  
-  Step 2: 
-    try the following command 
-      npx eslint --init 
-      or 
-      You can also run this command directly using 'npm init @eslint/config'.
+    ** Setting Linting
+    ---------------
+    install eslint - npm i eslint --save-dev
+    set up - npx i eslint --init
 
-    to create .eslintrc.json 
-  
-  Step 3:
-  --
-    we can setup the rules or inherit from standard rules
+    In package.json- inside script add these two lines.
+    "lint" : "eslint .",
+    "lint:fix" : "eslint . --fix"
 
-  Step 4: 
-  --
-    we can setup prettier now
+    lint is used to show the errors.
+    lint:fix is used to fix the errors.
 
-    create .prettierrc.json in root folder of our project
-    and have the following rules 
+    In terminal, run-> npm run lint 
+    This will give the errors in all components.
 
+    To fix it, in terminal run-> npm run lint:fix
+    This will fix the all errors automatically.
+
+    ** How to Setup ESLint and prettier?
+    ----------------------
+    prettier - extension 
+
+    create .prettierrc.json in root folder in project
+    Type,
     {
       "singleQuote": true,
       "trailingComma": "none"
     }
+    reference link :
+    https://medium.com/@frontend-newbie/integrating-prettier-with-eslint-for-your-create-react-app-in-vscode-153ebe89c1a2
+    
+    ** linting will show error in App.test.js file  
+        open .eslintrc.json, modify
+        "env": {
+          "browser": true,
+          "es2021": true,
+          "jest": true /// This line is needed to fix the error around JEST codes in App.test.js 
+        },
+    ** Warning: React version not specified in eslint-plugin-react settings ->
+        There will be a warning related to react version during linting.
+        Fixing by having the following in .eslintrc.json file 
+        "settings": {
+          "react": {
+            "version": "detect"
+          }
+        }
 
   
 

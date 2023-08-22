@@ -65,88 +65,88 @@ export class LifeCycleDemo extends Component {
     console.log('2. and 5. Inside Render Method');
     if (this.state.isLoading) {
       return (
-                <div>
-                    <div className="spinner-border text-primary" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div>
-                    <div className="spinner-border text-secondary" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div>
-                    <div className="spinner-border text-success" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div>
-                    <div className="spinner-border text-danger" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div>
-                    <div className="spinner-border text-warning" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div>
-                    <div className="spinner-border text-info" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div>
+        <div>
+          <div className="spinner-border text-primary" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          <div className="spinner-border text-secondary" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          <div className="spinner-border text-success" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          <div className="spinner-border text-danger" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          <div className="spinner-border text-warning" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          <div className="spinner-border text-info" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
 
-                    <div className="spinner-border text-dark" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div>
-                    <div className="spinner-border text-primary" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div>
-                    <div className="spinner-border text-secondary" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div>
-                    <div className="spinner-border text-success" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div>
-                    <div className="spinner-border text-danger" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div>
-                    <div className="spinner-border text-warning" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div>
-                    <div className="spinner-border text-info" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div>
+          <div className="spinner-border text-dark" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          <div className="spinner-border text-primary" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          <div className="spinner-border text-secondary" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          <div className="spinner-border text-success" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          <div className="spinner-border text-danger" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          <div className="spinner-border text-warning" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          <div className="spinner-border text-info" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
 
-                    <div className="spinner-border text-dark" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div>
-                    <div className="spinner-border text-primary" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div>
-                    <div className="spinner-border text-secondary" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div>
-                    <div className="spinner-border text-success" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div>
-                    <div className="spinner-border text-danger" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div>
-                    <div className="spinner-border text-warning" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div>
-                    <div className="spinner-border text-info" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div>
+          <div className="spinner-border text-dark" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          <div className="spinner-border text-primary" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          <div className="spinner-border text-secondary" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          <div className="spinner-border text-success" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          <div className="spinner-border text-danger" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          <div className="spinner-border text-warning" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          <div className="spinner-border text-info" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
 
-                    <div className="spinner-border text-dark" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div>
-                </div>
+          <div className="spinner-border text-dark" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+        </div>
       )
     }
 
     if (this.state.isError) {
       return (
-                <div className = "alert alert-danger">Error occured! Please try Again...</div>
+        <div className = "alert alert-danger">Error occured! Please try Again...</div>
       )
     }
 
     return (
-            <div>
-                <h5>Life Cycle Demo</h5>
-                <p id = "myPara">We are learning about feature : {this.state.featureName}</p>
-            </div>
+      <div>
+        <h5>Life Cycle Demo</h5>
+        <p id = "myPara">We are learning about feature : {this.state.featureName}</p>
+      </div>
     )
   }
 }

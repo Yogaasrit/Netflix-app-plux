@@ -20,8 +20,8 @@ export class MyProfile extends Component {
         {/* value =  {this.state.profileName}> Cant Change in text box change to defaultValue = .. */}
         {/* controlled component - The form value is controlled by react */}
         <input type = "text"
-           value = {this.state.profileName}
-           onChange = {this.handleChangeProfileName}>
+          value = {this.state.profileName}
+          onChange = {this.handleChangeProfileName}>
         </input>
         <p>profileName : {this.state.profileName}</p>
       </div>
