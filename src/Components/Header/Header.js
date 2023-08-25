@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import MenuList from '../MenuList/MenuList';
 
 function Header () {
@@ -6,9 +7,9 @@ function Header () {
       <header>
         <nav className="navbar navbar-expand-md fixed-top" style={{ backgroundColor: '#F07A91' }}>
           <div className="container-fluid">
-            <a className="navbar-brand" href="/">
+            <Link className="navbar-brand" to="/">
               <h2>NetflexPlus App</h2>
-            </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"

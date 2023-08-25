@@ -25,6 +25,13 @@ const MenuList = () => {
           Contact Us
         </NavLink>
       </li>
+
+      <li className="nav-item">
+        <NavLink className="nav-link " to="/hooks-demo">
+          Hooks Demo
+        </NavLink>
+      </li>
+
     </ul>
   )
 }

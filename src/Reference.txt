@@ -363,9 +363,25 @@ Javascript engine will work in Two modes:
             "version": "detect"
           }
         }
+        --------------------------------------------------
+Hooks:
+=======
+Before react 16.8
+-----------------
+1. Functional components didnt have state.
+2. Functional components didnt have lifecycle Hooks.
+After react 16.8 both are possible in functional component.
+
+Rules for writing hooks:
+------------------------
+1. Write hooks in a top level.
+   Dont write inside loop, function, Conditionals.
+2. Write hooks in a component(functional).
+   Dont write in function.
 
 
---------------------------------------------------
+
+
 
   
 

@@ -38,7 +38,7 @@ export class ErrorBoundary extends Component {
         </div>
       )
     }
-    return this.props.children
+    return <div>{this.props.children}</div>
   }
 }
 
