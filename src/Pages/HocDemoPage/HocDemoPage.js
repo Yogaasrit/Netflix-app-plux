@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet';
 import applyStyles from '../../hoc/ApplyStyles'
 import Bye from './Bye/Bye'
 import Hello from './Hello/Hello'
@@ -14,6 +15,11 @@ const StyledBye = applyStyles(Bye);
 const HocDemoPage = () => {
   return (
     <div>
+      <Helmet>
+        <title>
+          HOC Demo
+        </title>
+      </Helmet>
       <h1>HocDemoPage</h1>
       {/* displaying in styledHello and stylesBye */}
       <StyledHello name="Yogaasri"/>
