@@ -8,7 +8,7 @@ function Header () {
         <nav className="navbar navbar-expand-md fixed-top" style={{ backgroundColor: '#F07A91' }}>
           <div className="container-fluid">
             <Link className="navbar-brand" to="/">
-              <h2>NetflexPlus App</h2>
+              <h2>Netflix App</h2>
             </Link>
             <button
               className="navbar-toggler"
