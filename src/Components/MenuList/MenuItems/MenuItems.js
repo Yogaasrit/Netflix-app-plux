@@ -1,22 +1,21 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
+
 import PropTypes from 'prop-types';
 
-const MenuItems = (props) => {
+const MenuItem = (props) => {
   return (
     <div>
       <li className="nav-item">
-        <NavLink className="nav-link " to={props.menuRoute}>
-          {props.menuName}
+        <NavLink className="nav-link " aria-current="page" to={props.link}>
+          <h4>{props.title}</h4>
         </NavLink>
       </li>
     </div>
   );
 };
 
-MenuItems.propTypes = {
-  menuRoute: PropTypes.string,
-  menuName: PropTypes.string
-}
-
-export default MenuItems;
+MenuItem.propTypes = {
+  link: PropTypes.string,
+  title: PropTypes.string
+};
+export default MenuItem;

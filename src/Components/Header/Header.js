@@ -5,22 +5,11 @@ function Header () {
   return (
     <div>
       <header>
-        <nav className="navbar navbar-expand-md fixed-top" style={{ backgroundColor: '#F07A91' }}>
+        <nav className="navbar navbar-expand-md fixed-top" style={{ backgroundColor: '#a9c52f' }}>
           <div className="container-fluid">
-            <Link className="navbar-brand" to="/">
-              <h2>Netflix App</h2>
+            <Link className="navbar-brand text-danger" to="/">
+              <h3>NetflixApp</h3>
             </Link>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarCollapse"
-              aria-controls="navbarCollapse"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
             <MenuList/>
             <div className="collapse navbar-collapse" id="navbarCollapse">
 
@@ -36,6 +25,7 @@ function Header () {
                 </button>
               </form> */}
             </div>
+            <button className='btn btn-danger'>Cart(0)</button>
           </div>
         </nav>
       </header>

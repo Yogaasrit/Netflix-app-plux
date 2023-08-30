@@ -8,7 +8,7 @@ const AboutUs = () => {
   return (
 
     <ErrorBoundary>
-      <h1>AboutUs Page</h1>
+      <h1 style={{ color: '#748720' }}>🎉🎉Welcome to AboutUsPage!🎉🎉</h1>
       <h2> Demo of MockFragment page</h2>
       <MockFragment>
         <Helmet>

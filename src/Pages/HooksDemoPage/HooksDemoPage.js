@@ -13,7 +13,7 @@ const HooksDemoPage = () => {
           Hooks Demo
         </title>
       </Helmet>
-      <h1>REACT HOOKS DEMO</h1>
+      <h1 style={{ color: '#748720' }}>🎉🎉Welcome to HooksDemoPage!🎉🎉</h1>
       <hr/>
       <h3>1.Use State Demo</h3>
       <MyAccount/>

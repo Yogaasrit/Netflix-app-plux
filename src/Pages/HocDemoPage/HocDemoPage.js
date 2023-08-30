@@ -20,7 +20,7 @@ const HocDemoPage = () => {
           HOC Demo
         </title>
       </Helmet>
-      <h1>HocDemoPage</h1>
+      <h1 style={{ color: '#748720' }}>🎉🎉Welcome to HocDemoPage!🎉🎉</h1>
       {/* displaying in styledHello and stylesBye */}
       <StyledHello name="Yogaasri"/>
       <StyledBye name = "Yogaa"/>
