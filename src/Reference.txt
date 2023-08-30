@@ -382,26 +382,38 @@ Rules for writing hooks:
 1. useState() Hook 
 --------------------
 
-useEffect() - Hook 
+
+
+2. useContext()
+-------------------
+  It is used to share the data with any to any component.
+
+  Step 1: createContext with any data or even null inside.
+  Refer: PageContext.js 
+
+  Step 2: Provide the data to the list of components you want to share.
+  Check: App.js 
+
+  const userDetails = {
+    isLoggedIn: false,
+    lastLogIn: 'Yesterday 10 PM'
+  };
+
+  Step 3: Using <PageContext.Provider> to share the data across the few components.
+  
+  Step 4: Consume it in contactUs using useContext(PageContext);
+  check: contactUs.
+
+  3. useEffect()
+  -------------------
+  useEffect() - Hook 
   is what componentDidMount and componentDidUpdate to class comp 
   will get executed after render cycle 
   useEffect( () => {
     console.log('test');
   })
 
-2. useContext()
--------------------
-  Let's us share data across components 
-
-  Step 1: create context with any data or even null inside 
-  Refer: PageContext.js 
-
-  Step 2: Provide the data to the list of components you want to share 
-  Check App.js 
-
-  Step 3: Using <PageContext.Provider> to share the data across the few components.
-
-  Step 4: Consume it in contactUs.
+  
 
 
 

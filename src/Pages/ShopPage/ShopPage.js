@@ -20,6 +20,10 @@ const ShopPage = () => {
       quantity: 20
     }
   ];
+
+  const handleAddToCart = (product) => {
+    console.log(product);
+  };
   return (
     <div>
       <Helmet>
@@ -41,7 +45,7 @@ const ShopPage = () => {
                   <button
                     type="button"
                     className="btn btn-primary btn-sm"
-                    // onClick = {handleAddToCart(product.name)}
+                    onClick={handleAddToCart.bind(this, product)}
                   >
                     Add to Cart
                   </button>
