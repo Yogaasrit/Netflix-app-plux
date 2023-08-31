@@ -414,7 +414,10 @@ Rules for writing hooks:
   })
 
   
+displaying cart item count
+--------------------------
 
+1. 
 
 
 

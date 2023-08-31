@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet';
+import { CartContext } from '../../context/CartContext/CartContext';
 
 const ShopPage = () => {
   const products = [
@@ -21,8 +22,17 @@ const ShopPage = () => {
     }
   ];
 
+  const cart = useContext(CartContext);
+
   const handleAddToCart = (product) => {
     console.log(product);
+
+    cart.cartDispatcher(
+      {
+        type: 'ADD_TO_CART',
+        payload: cart.cartState
+      }
+    )
   };
   return (
     <div>

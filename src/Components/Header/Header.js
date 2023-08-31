@@ -4,8 +4,9 @@ import { CartContext } from '../../context/CartContext/CartContext';
 import MenuList from '../MenuList/MenuList';
 
 function Header () {
-  const cartItem = useContext(CartContext);
-  console.log(cartItem);
+  const cart = useContext(CartContext);
+  console.log(cart.cartState);
+
   return (
     <div>
       <header>
@@ -32,7 +33,7 @@ function Header () {
               </form> */}
             </div>
             <button type="button" className="btn btn-danger">
-              Cart(0)
+              Cart({cart.cartState?.length === undefined ? '0' : cart.cartState?.length})
             </button>
           </div>
         </nav>

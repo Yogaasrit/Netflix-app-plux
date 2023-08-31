@@ -13,10 +13,8 @@ const todoReducer = (state = [], action) => {
   case 'Add-Todos':
     return [...state, action.payload];
     // Adding the new todo to the old array.
-
-  case 'List-Todos':
-    return state;
-
+  case 'LIST_TODOS':
+    return action.payload;
   default :
     return state;
   }

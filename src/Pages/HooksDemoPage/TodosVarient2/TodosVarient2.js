@@ -1,4 +1,5 @@
 import React, { useRef, useReducer, useEffect } from 'react';
+import axios from 'axios';
 import todoReducer from '../../../Reducer/TodoReducer/todoReducer';
 
 const TodosVariant2 = () => {
@@ -27,11 +28,37 @@ const TodosVariant2 = () => {
   };
 
   useEffect(() => {
-    // Calling dispattch fn with list type.
-    todoDispatch({
-      type: 'List-Todo'
-    });
+    // will be executed after initial rendering
+    // ideal place for your REST API calls
+    /* What are the things you need to connect to REST API?
+    1. What's the REST API URL / Endpoint?
+        https://jsonplaceholder.typicode.com/todos?_limit=3
+    2. What's the HTTP Method? GET
+    3. What's the REST API Client / Http client tool? axios
+    */
+    axios.get('https://jsonplaceholder.typicode.com/todos?_limit=5')
+      .then((res) => { // handling success
+        console.log(res.data);
+        todoDispatch({
+          type: 'LIST_TODOS',
+          payload: res.data
+        });
+      })
+      .catch((err) => { // handling error
+        console.log(err);
+      })
+      .finally(() => {
+        console.log('It is over!');
+      });
   }, []);
+
+  // useEffect(() => {
+  //   // Calling dispattch fn with list type.
+  //   todoDispatch({
+  //     type: 'List-Todo'
+  //   });
+  // }, []);
+  console.log(todoList);
 
   return (
     <div style={{ backgroundColor: '#f9ccac', padding: '20px' }}>

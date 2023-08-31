@@ -13,6 +13,8 @@ import HooksDemoPage from './Pages/HooksDemoPage/HooksDemoPage';
 import { PageContext } from './context/PageContext/PageContext.js';
 import ShopPage from './Pages/ShopPage/ShopPage';
 import { CartContext } from './context/CartContext/CartContext';
+import { useReducer } from 'react';
+import CartReducer from './Reducer/CartReducer/CartReducer';
 // import ErrorBoundary from './Containers/Shared/ErrorBoundary/ErrorBoundary';
 
 function App () {
@@ -21,10 +23,16 @@ function App () {
     lastLogIn: 'Yesterday 10 PM'
   };
 
-  const cartItem = [10];
+  const [cartState, cartDispatcher] = useReducer(CartReducer);
+
+  const cart = {
+    cartState,
+    cartDispatcher
+  }
+
   return (
     // {/* must return jsx */}
-    <CartContext.Provider value={cartItem}>
+    <CartContext.Provider value={cart}>
       <BrowserRouter>
         <div>
           <Header />
