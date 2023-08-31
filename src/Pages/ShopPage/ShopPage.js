@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet';
 import { CartContext } from '../../context/CartContext/CartContext';
+import { FavoriteContext } from '../../context/FavoriteContext/FavoriteContext';
 
 const ShopPage = () => {
   const products = [
@@ -25,15 +26,22 @@ const ShopPage = () => {
   const cart = useContext(CartContext);
 
   const handleAddToCart = (product) => {
-    console.log(product);
-
-    cart.cartDispatcher(
-      {
-        type: 'ADD_TO_CART',
-        payload: cart.cartState
-      }
-    )
+    // console.log(product);
+    cart.cartDispatcher({
+      type: 'ADD_TO_CART',
+      payload: product
+    });
   };
+
+  const favorite = useContext(FavoriteContext);
+  const handleAddToFavorites = (product) => {
+    // console.log(product);
+    favorite.favoriteDispatcher({
+      type: 'ADD_TO_FAVORITES',
+      payload: product
+    });
+  };
+
   return (
     <div>
       <Helmet>
@@ -62,8 +70,9 @@ const ShopPage = () => {
                   <button
                     type="button"
                     className="ms-2 btn btn-outline-danger btn-sm"
+                    onClick={handleAddToFavorites.bind(this, product)}
                   >
-                    Favorite
+                    Add to Favorite
                   </button>
                 </div>
               </div>

@@ -1,11 +1,15 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext/CartContext';
+import { FavoriteContext } from '../../context/FavoriteContext/FavoriteContext';
 import MenuList from '../MenuList/MenuList';
 
-function Header () {
+function Header() {
   const cart = useContext(CartContext);
-  console.log(cart.cartState);
+  // console.log(cart.cartState);
+
+  const favorite = useContext(FavoriteContext);
+  // console.log(favorite.favoriteState);
 
   return (
     <div>
@@ -19,21 +23,20 @@ function Header () {
               <h3>NetflixApp</h3>
             </Link>
             <MenuList />
-            <div className="collapse navbar-collapse" id="navbarCollapse">
-              {/* <form className="d-flex" role="search">
-                <input
-                  className="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button className="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form> */}
-            </div>
+            <div className="collapse navbar-collapse" id="navbarCollapse"></div>
+            <button type="button" className="btn btn-dark">
+              Cart(
+              {cart.cartState?.length === undefined
+                ? '0'
+                : cart.cartState?.length}
+              )
+            </button>
             <button type="button" className="btn btn-danger">
-              Cart({cart.cartState?.length === undefined ? '0' : cart.cartState?.length})
+              Favorites(
+              {favorite.favoriteState?.length === undefined
+                ? '0'
+                : favorite.favoriteState?.length}
+              )
             </button>
           </div>
         </nav>

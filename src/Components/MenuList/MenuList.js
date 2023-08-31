@@ -10,6 +10,7 @@ const MenuList = () => {
     { link: '/contact-us', title: 'ContactUs' },
     { link: '/hooks-demo', title: 'HooksDemo' },
     { link: '/shop', title: 'Shop' }
+    // { link: '/cart', title: 'Cart' }
 
   ];
   const componentDataArray = attributeArrayObject.map((attribute) => {

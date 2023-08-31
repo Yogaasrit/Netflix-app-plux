@@ -4,7 +4,7 @@ import { PageContext } from '../../context/PageContext/PageContext';
 
 const ContactUs = () => {
   const userDetails = useContext(PageContext);
-  console.log(userDetails);
+  // console.log(userDetails);
   return (
     <>
       <Helmet>

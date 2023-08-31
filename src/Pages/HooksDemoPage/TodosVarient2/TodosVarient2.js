@@ -9,13 +9,13 @@ const TodosVariant2 = () => {
   const [todoList, todoDispatch] = useReducer(todoReducer);
   // UseReducer always expect the reducer. -> useReducer(todoReducer) here, todoReducer is a reducer.
   // todoList is a state data. It can be array or object or single data.
-  console.log(todoList);// undefined
+  // console.log(todoList);// undefined
   // undefined -- get the state data from reducer. How?
   // dispatcher fn must be called with an action obj to get state data from the reducer
-  console.log(todoDispatch);
+  // console.log(todoDispatch);
 
   const handleAddTodo = () => {
-    console.log(todoInput.current.value);
+    // console.log(todoInput.current.value);
     // calling dispatch method with action type.
     todoDispatch({
       type: 'Add-Todos',
@@ -38,7 +38,7 @@ const TodosVariant2 = () => {
     */
     axios.get('https://jsonplaceholder.typicode.com/todos?_limit=5')
       .then((res) => { // handling success
-        console.log(res.data);
+        // console.log(res.data);
         todoDispatch({
           type: 'LIST_TODOS',
           payload: res.data
@@ -48,7 +48,7 @@ const TodosVariant2 = () => {
         console.log(err);
       })
       .finally(() => {
-        console.log('It is over!');
+        // console.log('It is over!');
       });
   }, []);
 
@@ -58,7 +58,7 @@ const TodosVariant2 = () => {
   //     type: 'List-Todo'
   //   });
   // }, []);
-  console.log(todoList);
+  // console.log(todoList);
 
   return (
     <div style={{ backgroundColor: '#f9ccac', padding: '20px' }}>

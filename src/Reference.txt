@@ -175,6 +175,7 @@ Naming Conventions & Casing
 
 ------------------------------------------------------------------------------------------------------------
 Styling in React
+----------------
 1. External Styling
     From third party - ex bootstrap
     Our own third 
@@ -186,6 +187,7 @@ Styling in React
 3. Inline styling
 -----------------------------------------------------------------------------------------------------------
 One-Way binding
+--------------
 * JS -> JSX
 keeping the data in js and displaying it in jsx.
 Two-Way Binding
@@ -196,7 +198,7 @@ Changing The value in JSX will reflect in JS also.
 ---------------------------------------------------------------------------------------------------------
 
 Single Page App (SPA) Characteristics (7)
----------------
+-------------------------------------------
   1. Pages should Not Refresh 
   2. URL should be changed 
   3. History should be maintained without Page Refresh 
@@ -207,12 +209,14 @@ Single Page App (SPA) Characteristics (7)
 
   --------------------------------------------------------------------------------------------------------
 Life Cycle of Hooks
+-----------------------
 
 Class Component only will have Hooks.
 Hooks are methods.(MEthod is a function coded inside a class).
 
 --------------------------------------------------------------------------------------------------
-Routing 
+Routing
+-----------
 
   Step 1:
   ------
@@ -271,8 +275,10 @@ Routing
 Helmet package
 
 Advance Topics:
+----------------
 
 1. Fragment
+------------
 Fragment  is used to wrap the more children tags instead of div
 <Fragment>
   <h1></h1>
@@ -285,6 +291,7 @@ Multiple fragments is not allowed.
 <></> -> This is also fragment.
 
 2. Strictmode
+--------------
 It is programmed to print twice during development mode.
 Javascript engine will work in Two modes:
   1. Non-strict mode-default
@@ -293,10 +300,12 @@ Javascript engine will work in Two modes:
   It can also be in function.
 
 3. Hoc - Higher Order Component
+----------------------------------
 // a higher-order component (HOC) is a function that
 // takes a component as input and return a new comp as output
 
 4. Types of Language based on Data typing
+-----------------------------------------
   1. Strictly Typed / Strongly Typed
       ex: Java,C#,TypeScript
       String myStr = "Yoga";
@@ -308,6 +317,7 @@ Javascript engine will work in Two modes:
       myStr = false;// -> NO ERROR
 
 5.Static TypeChecking
+----------------------
     1. Intergrating TypeScript. (.tsx)
     2. FlowJs (.js)
     3. prop-types -> install from "https://www.npmjs.com/package/prop-types" command npm i prop-types to install.
@@ -316,6 +326,7 @@ Javascript engine will work in Two modes:
 
 
 6. Linting
+----------------
     ESLINT
     ** Setting Linting
     ---------------
@@ -363,7 +374,7 @@ Javascript engine will work in Two modes:
             "version": "detect"
           }
         }
-        --------------------------------------------------
+------------------------------------------------------------------------------------------------------
 Hooks:
 =======
 Before react 16.8
@@ -381,8 +392,20 @@ Rules for writing hooks:
 
 1. useState() Hook 
 --------------------
+ // Returns a stateful value, and a function to update it.
+  // const myArray = useState('Yogaa');
+  // This array always have two index only- 1. State Value 2. Function.
+  // console.log(myArray);
+  // console.log(myArray[o]); - Yogaa
+  // Being only two index we destructure - const [name, setName] = useState('Yoga);
 
-
+  const [accountName, setAccountName] = useState('Yoga');
+  // name - state value
+  // setName- function
+  // Initially name is 'Yoga' when setName is called it updates the state as 'Sri'.
+   const HandleChangeUserName = () => {
+    setAccountName('Sri');
+  }
 
 2. useContext()
 -------------------
@@ -404,7 +427,7 @@ Rules for writing hooks:
   Step 4: Consume it in contactUs using useContext(PageContext);
   check: contactUs.
 
-  3. useEffect()
+3. useEffect()
   -------------------
   useEffect() - Hook 
   is what componentDidMount and componentDidUpdate to class comp 
@@ -413,14 +436,116 @@ Rules for writing hooks:
     console.log('test');
   })
 
+4. useReducer()
+----------------------
+
+  It is a function that have state and action.
+  Initially state is empty 
+  // it must return new state based on the "type of action" dispatched.
+  todoReducer.js:->
+  const todoReducer = (state = [], action) => {
+    return state;
+  }
+  Todovarient2.js : ->
+  const [todoList, todoDispatch] = useReducer(todoReducer);
+    // UseReducer always expect the reducer. -> useReducer(todoReducer) here, todoReducer is a reducer.
+    // todoList is a state data. It can be array or object or single data.
+    // console.log(todoList);// undefined
+    // undefined -- get the state data from reducer. How?
+    // dispatcher fn must be called with an action obj to get state data from the reducer
+    // console.log(todoDispatch);
+
+    const handleAddTodo = () => {
+      // console.log(todoInput.current.value);
+      // calling dispatch method with action type.
+      todoDispatch({
+        type: 'Add-Todos',
+        payload: {
+          id: Math.floor(Math.random() * 1000),
+          title: todoInput.current.value,
+          isCompleted: false
+        }
+      });
+    };
   
-displaying cart item count
---------------------------
+  5. useRef:
+  -------------
+    const todoInput = useRef('');
+    // create a ref for the input field to capture the entered input in a fn comp.
+    ref={todoInput}
 
-1. 
-
+  6. useId:
+  --------------
 
 
   
+Displaying cartItem count in header
+-------------------------------------
 
+1. App.js -> const [cartState, cartDispatcher] = useReducer(CartReducer);
+Initially cartState will be undefined.
+          cartDispatcher will be unexecutedFunction.
+useReducer is a hook like useState which updates the state.
+Here, CartReducer is a reducer inside reducer folder.
 
+2. CartReducer -> It consist of state and action.
+Initially state is empty.
+          Action is a object.
+Const CartReducer = (state = [] , action) => {
+  return state.
+}
+
+The Data should be passed from shopPage to header.
+
+3. App.js -> We need cartState in header component to change the value in cart button.
+             We need cartDispatcher in shopPage component to sent the action to CartReducer.
+
+4. So to set the communication between header with App and shopPage with App,
+we need useContext.
+
+5. CartContext:-> create createContext in CartContext file and export it.
+
+6. App js: -> set CartContext.Provider and the cartState, cartDispatcher as value.
+So keep cartState, cartDispatcher in single object 'cart' and send cart as value.
+<CartContext.Provider value={cart}>
+Wrap it up with the components where the data to be shared.
+
+7. shopPage: -> useContext for communication
+const cart = useContext(CartContext);
+In handler, the disptacher function is called.
+const handleAddToCart = (product) => {
+    // console.log(product);
+    cart.cartDispatcher({
+      type: 'ADD_TO_CART',
+      payload: product
+    });
+  };
+
+8. In CartReducer, switch statement is executed.
+based on the type, the action is performed.
+ADD_TO_CART is done.
+so the item is added in the state(ie.cartState).
+
+8. Header: -> useContext for communication
+const cart = useContext(CartContext);
+cart.cartState is needed in header bc we need only the state data.
+So destructing cart.cartState and printing its length inside button.
+
+--------------------------------------------------------------------------------------
+Connecting Backend Third party:
+------------------------------
+/* Ways to make REST API Calls in JS
+  1. using AJAX (XMLHttpRequest)    -- Native JS
+  2. using promised based fetch api (introduced in 2015  -- Native JS)
+  3. using axios (third-party) 
+*/
+ // will be executed after initial rendering
+    // ideal place for your REST API calls
+    /* What are the things you need to connect to REST API?
+    1. What's the REST API URL / Endpoint?
+        https://jsonplaceholder.typicode.com/todos?_limit=3
+    2. What's the HTTP Method? GET
+    3. What's the REST API Client / Http client tool? axios
+    */
+Ref: Todovarient2
+-----------------------------------------------------------------------------------------
