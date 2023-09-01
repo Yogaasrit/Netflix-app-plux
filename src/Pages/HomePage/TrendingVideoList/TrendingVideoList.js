@@ -1,6 +1,7 @@
 import { Component } from 'react';
+import TrendingVideoItems from './TrendingVideoItems/TrendingVideoItems';
 class TrendingVideoList extends Component {
-  constructor () {
+  constructor() {
     super(); // just to call component
     this.x = 10; // public variable
   }
@@ -31,60 +32,42 @@ class TrendingVideoList extends Component {
     ],
 
     videoResolution: '4k'
-  }
-
-  handleChangeResolution = () => {
-    this.setState(
-      {
-        videoResolution: '8k'
-      }
-    )
   };
 
-  render () {
+  handleChangeResolution = () => {
+    this.setState({
+      videoResolution: '8k'
+    });
+  };
+
+  render() {
     return (
       <div className="row">
-
-        <p>videoResolution : Enjoy Watching the {this.state.videoResolution} {' '}
-          <button type='button'
-            className='btn btn-primary btn-sm'
-            onClick = {this.handleChangeResolution}
+        <p>
+          videoResolution : Enjoy Watching the {this.state.videoResolution}{' '}
+          <button
+            type="button"
+            className="btn btn-primary btn-sm"
+            onClick={this.handleChangeResolution}
           >
-                    Change Resolution
-
+            Change Resolution
           </button>
         </p>
-
-        <div className="col-md-3">
-
-          <div className="card">
-            <img src={this.state.videos[0].thumbnailUrl} className="card-img-top" alt="..." />
-            <div className="card-body">
-              <h5 className={this.state.videos[0].trendingRank}>{this.state.videos[0].title}</h5>
-              <p>{this.state.videos[0].desc}</p>
-              <ul className="list-group list-group-flush">
-                <li className="list-group-item">{this.state.videos[0].views}</li>
-                <li className="list-group-item">{this.state.videos[0].publishedOn}</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-3">
-
-          <div className="card">
-            <img src={this.state.videos[1].thumbnailUrl} className="card-img-top" alt="..." />
-            <div className="card-body">
-              <h5 className={this.state.videos[1].trendingRank}>{this.state.videos[1].desc}</h5>
-              <p>{this.state.videos[1].desc}</p>
-              <ul className="list-group list-group-flush">
-                <li className="list-group-item">{this.state.videos[1].views}</li>
-                <li className="list-group-item">{this.state.videos[1].publishedOn}</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        {this.state.videos.map((video) => {
+          return (
+            <TrendingVideoItems key = {video.id}
+              id={video.id}
+              rank={video.trendingRank}
+              title={video.title}
+              desc={video.desc}
+              thumbnailUrl={video.thumbnailUrl}
+              views={video.views}
+              publishedOn={video.publishedOn}
+            />
+          );
+        })}
       </div>
-    )
+    );
   }
 }
 export default TrendingVideoList;
