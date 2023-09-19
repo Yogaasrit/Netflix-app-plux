@@ -331,11 +331,20 @@ Javascript engine will work in Two modes:
     ** Setting Linting
     ---------------
     install eslint - npm i eslint --save-dev
-    set up - npx i eslint --init
+    set up - npx eslint --init
 
     In package.json- inside script add these two lines.
     "lint" : "eslint .",
     "lint:fix" : "eslint . --fix"
+
+    	1.to check syntax, find prblm, and enfore code style
+	2.javascript
+	3.react
+	4.no typescript
+	5.browser
+	6.use a popular stype
+	7.standard
+	8.json
 
     lint is used to show the errors.
     lint:fix is used to fix the errors.
@@ -548,5 +557,4 @@ Connecting Backend Third party:
     3. What's the REST API Client / Http client tool? axios
     */
 Ref: Todovarient2
------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------
+-=----------------------------------------------------------
