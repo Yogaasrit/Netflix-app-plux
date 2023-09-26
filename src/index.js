@@ -2,7 +2,7 @@
 // if we want to import from node modules -> direct import
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
+import 'bootstrap/dist/css/bootstrap.css';
 // importing from user -> custom import
 // ./ -> this symbol is used for importing from current package
 import './index.css';

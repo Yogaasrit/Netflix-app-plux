@@ -1,7 +1,6 @@
 // entire file is javascript
 
 import './App.css'; // css for app comp
-import 'bootstrap/dist/css/bootstrap.css';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import { BrowserRouter } from 'react-router-dom';
